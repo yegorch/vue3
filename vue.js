@@ -52,7 +52,7 @@ const App = {
     },
     setActive(idx) {
       // когда нажимаем на определенный шаг
-      if(!this.unButton) this.activeIndex = idx
+     this.activeIndex = idx
     }
   },
   computed: {
