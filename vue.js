@@ -1,5 +1,3 @@
-
-
 const App = {
   data() {
     return {
@@ -18,21 +16,15 @@ const App = {
   },
   methods: {
     prev() {
-
       // когда нажимаем кнопку назад
      // this.activeIndex--
-
 //      if (this.activeIndex = 0) {
   //      this.activeIndex++
      // }
-
      if (this.activeIndex !== 0) {
        this.activeIndex = this.activeIndex - 1
      }
-     
     },
-
-
     reset() {
       // начать заново
     this.activeIndex = 0
@@ -40,12 +32,10 @@ const App = {
     },
     nextOfFinish() {
       // кнопка вперед или закончить
-
      if (this.finishStep) this.unButton = true
      else {
        this.activeIndex = this.activeIndex +1
      }
-
       //this.activeIndex++ 
     },
     setActive(idx) {
@@ -58,29 +48,19 @@ const App = {
     // 1. текущий выбранный шаг
     // 2. выключена ли кнопка назад
     // 3. находимся ли мы на последнем шаге
-
-    // 1 
-
     nowStep() {
       return this.activeIndex
     },
-  
+ 
     // 2
-
     unButtonPrev() {
       return this.unButton
     },
-
     // 3 
-    
     finishStep() {
       return this.activeIndex + 1 === this.steps.length
     },
 
   }
 }
-
-
-
-
 Vue.createApp(App).mount('#app')
